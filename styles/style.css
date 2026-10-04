@@ -146,3 +146,18 @@ p {
     line-height: 1.6;
     margin-bottom: 2.5rem;
 }
+/* Button */
+.btn {
+    background-color: var(--accent);
+    color: var(--bg-dark);
+    padding: 0.9rem 2.2rem;
+    font-weight: 700;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.btn:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
