@@ -68,8 +68,10 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(8, 12, 15, 0.75); /* Lowered from 0.95 to show background more */
-    backdrop-filter: blur(8px); /* Gives a sleek frosted-glass effect */
+    background-color: rgba(8, 12, 15, 0.75);
+    /* Lowered from 0.95 to show background more */
+    backdrop-filter: blur(8px);
+    /* Gives a sleek frosted-glass effect */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -166,4 +168,36 @@ p {
 .btn:hover {
     opacity: 0.9;
     transform: translateY(-2px);
+}
+
+.overlay-menu nav ul a {
+    position: relative;
+    color: var(--text-main);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 700;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+.overlay-menu nav ul a:hover {
+    color: var(--accent);
+    transform: scale(1.05);
+    /* Gives a subtle growth effect */
+}
+
+/* Sliding underline glow effect */
+.overlay-menu nav ul a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -6px;
+    left: 0;
+    background-color: var(--accent);
+    transition: width 0.3s ease;
+}
+
+.overlay-menu nav ul a:hover::after {
+    width: 100%;
 }
