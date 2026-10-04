@@ -22,3 +22,40 @@
             <span></span>
         </button>
     </header>
+    <!-- Curtain / Overlay Navigation Menu -->
+    <div class="overlay-menu" id="overlayMenu">
+        <button class="close-btn" id="closeToggle">&times;</button>
+        <nav>
+            <ul>
+                <li><a href="#services">AI Solutions</a></li>
+                <li><a href="#robotics">Autonomous Units</a></li>
+                <li><a href="#neural">Neural Networks</a></li>
+                <li><a href="#contact">Contact Core</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Hero Content -->
+    <main class="hero-section">
+        <h1>Next-Gen <span>AI & Robotics</span></h1>
+        <p>Deploying autonomous systems and advanced neural architecture for the next era of industrial automation.</p>
+        <a href="#services" class="btn">Explore Systems</a>
+    </main>
+
+    <!-- Simple JavaScript for Menu Toggle -->
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const closeToggle = document.getElementById('closeToggle');
+        const overlayMenu = document.getElementById('overlayMenu');
+
+        menuToggle.addEventListener('click', () => {
+            overlayMenu.classList.add('active');
+        });
+
+        closeToggle.addEventListener('click', () => {
+            overlayMenu.classList.remove('active');
+        });
+    </script>
+</body>
+
+</html>
