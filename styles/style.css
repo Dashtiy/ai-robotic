@@ -291,3 +291,183 @@ html {
     font-size: 1rem;
     margin-bottom: 0;
 }
+.inquiry-section {
+    padding: 6rem 5%;
+    background-color: var(--bg-dark);
+    text-align: center;
+    border-top: 1px solid rgba(0, 255, 204, 0.1);
+}
+
+.inquiry-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.inquiry-section h2 span {
+    color: var(--accent);
+}
+
+.section-subtitle {
+    color: rgba(255, 255, 204, 0.7);
+    margin-bottom: 4rem;
+}
+
+.inquiry-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.inquiry-card {
+    background-color: var(--surface);
+    border: 1px solid rgba(0, 255, 204, 0.15);
+    padding: 2rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.inquiry-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(0, 255, 204, 0.5);
+}
+
+.category-badge {
+    display: inline-block;
+    font-family: monospace;
+    font-size: 0.8rem;
+    color: var(--accent);
+    background: rgba(0, 255, 204, 0.08);
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(0, 255, 204, 0.2);
+}
+
+.inquiry-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    line-height: 1.4;
+}
+
+.inquiry-card p {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+.audio-trigger-container {
+    margin-top: 1.5rem;
+    text-align: center;
+    width: 100%;
+}
+
+.audio-label {
+    display: inline-block;
+    font-family: monospace;
+    font-size: 0.85rem;
+    color: var(--accent);
+    background: rgba(0, 255, 204, 0.08);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 255, 204, 0.2);
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.05em;
+}
+.inquiry-card {
+    background-color: var(--surface);
+    border: 1px solid rgba(0, 255, 204, 0.15);
+    padding: 2rem;
+    border-radius: 8px;
+    /* Smooth transition for the zoom effect */
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect: lifts the card up, scales it slightly, and adds a glowing border */
+.inquiry-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    border-color: rgba(0, 255, 204, 0.8);
+    box-shadow: 0 10px 30px rgba(0, 255, 204, 0.15);
+    z-index: 10;
+}
+/* Make cards look clickable */
+.inquiry-card {
+    cursor: pointer;
+}
+
+/* Modal Background Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+/* Active state makes it visible */
+.modal-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Modal Card Box */
+.modal-content {
+    background-color: var(--surface);
+    border: 1px solid var(--accent);
+    padding: 2.5rem;
+    border-radius: 12px;
+    max-width: 600px;
+    width: 90%;
+    position: relative;
+    box-shadow: 0 20px 50px rgba(0, 255, 204, 0.2);
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+}
+
+.modal-overlay.active .modal-content {
+    transform: translateY(0);
+}
+
+/* Close Button '[X]' */
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1.2rem;
+    background: none;
+    border: none;
+    color: var(--accent);
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.modal-close:hover {
+    color: #ffffff;
+}
+
+/* Style for text inside the modal */
+#modal-question {
+    font-size: 1.4rem;
+    color: #ffffff;
+    margin-bottom: 1.2rem;
+    line-height: 1.4;
+}
+
+#modal-answer {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.6;
+    margin-bottom: 0;
+}

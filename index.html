@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CoreMind AI & Robotics</title>
+    <title>CoreMind AI &amp; Robotics</title>
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/normalize.css">
 </head>
@@ -35,37 +35,46 @@
         </nav>
     </div>
 
-<!-- Hero Content -->
-<main class="hero-section">
-    <h1>Next-Gen <span>AI & Robotics</span></h1>
-    <p>Deploying autonomous systems and advanced neural architecture for the next era of industrial automation.</p>
-    <a href="#services" class="btn">Explore Systems</a>
-</main>
+    <!-- Hero Content -->
+    <main class="hero-section">
+        <a href="#services" class="btn" onclick="document.getElementById('bg-audio').play()">🎵 AI &
+            Human🎵 </a>
+        <h1>Next-Gen <span>AI & Robotics</span></h1>
+        <p>Deploying autonomous systems and advanced neural architecture for the next era of industrial automation.</p>
+        <a href="#services" class="btn">Explore Systems</a>
+    </main>
 
-<!-- Full-Width High-Tech Visual Section -->
-<section class="full-width-visual">
-    <img src="img/Board.jpg" alt="Futuristic AI neural network ground">
-</section>
-<!-- AI Services Section (Target for the button) -->
-<section id="services" class="services-section">
-    <h2>Autonomous <span>Capabilities</span></h2>
-    <p>Engineered for extreme environments, precision logistics, and neural data processing.</p>
-    
-    <div class="services-grid">
-        <div class="service-card">
-            <h3>Neural Core Routing</h3>
-            <p>Real-time pathfinding and dynamic routing for heavy industrial automation units.</p>
+    <!-- Full-Width High-Tech Visual Section -->
+    <section class="full-width-visual">
+        <img src="img/Board.jpg" alt="Futuristic AI neural network ground">
+    </section>
+    <!-- AI Services Section (Target for the button) -->
+    <section id="services" class="services-section">
+        <h2>Autonomous <span>Capabilities</span></h2>
+        <p>Engineered for extreme environments, precision logistics, and neural data processing.</p>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Neural Core Routing</h3>
+                <p>Real-time pathfinding and dynamic routing for heavy industrial automation units.</p>
+            </div>
+            <div class="service-card">
+                <h3>Autonomous Logistics</h3>
+                <p>Self-governing fleet management systems optimized for zero-latency operations.</p>
+            </div>
+            <div class="service-card">
+                <h3>Quantum Security</h3>
+                <p>Military-grade encryption securing distributed machine learning nodes across global networks.</p>
+            </div>
         </div>
-        <div class="service-card">
-            <h3>Autonomous Logistics</h3>
-            <p>Self-governing fleet management systems optimized for zero-latency operations.</p>
-        </div>
-        <div class="service-card">
-            <h3>Quantum Security</h3>
-            <p>Military-grade encryption securing distributed machine learning nodes across global networks.</p>
-        </div>
-    </div>
-</section>
+    </section>
+    <section id="inquiries" class="inquiry-section">
+        <h2>Neural Logs & <span>Ethics Archive</span></h2>
+        <p class="section-subtitle">Querying the intersection of automated engineering and human consciousness.</p>
+
+        <!-- JavaScript injects the Q&A cards here -->
+        <div id="qa-container" class="inquiry-grid"></div>
+    </section>
 
     <!-- Simple JavaScript for Menu Toggle -->
     <script>
@@ -81,6 +90,17 @@
             overlayMenu.classList.remove('active');
         });
     </script>
+    <audio id="bg-audio" src="audio/AI&human.mp3" loop></audio>
+    <script src="js/app.js"></script>
+    <!-- Pop-up Modal Overlay -->
+<div id="qa-modal" class="modal-overlay">
+    <div class="modal-content">
+        <button class="modal-close" id="modal-close-btn">&times;</button>
+        <span id="modal-category" class="category-badge"></span>
+        <h3 id="modal-question"></h3>
+        <p id="modal-answer"></p>
+    </div>
+</div>
 </body>
 
 </html>
